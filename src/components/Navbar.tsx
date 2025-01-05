@@ -19,6 +19,7 @@ const Navbar = ({ className }: { className?: string })=>{
                         <HoveredLink href="/branding">Amenities</HoveredLink>
                     </div>
                     </MenuItem>
+
                     <MenuItem setActive={setActive} active={active} item="Products">
                     <div className="  text-sm grid grid-cols-2 gap-10 p-4 ">
                         <ProductItem
@@ -47,6 +48,14 @@ const Navbar = ({ className }: { className?: string })=>{
                         />
                     </div>
                     </MenuItem>
+
+                    
+                    <MenuItem setActive={setActive} active={active} item="Events">
+                    <div className="flex flex-col space-y-4 text-sm">
+                        <HoveredLink href="/calendar">Event Calendar</HoveredLink>
+                    </div>
+                    </MenuItem>
+
 
 
                 </Menu>

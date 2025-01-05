@@ -1,4 +1,3 @@
-"use client"
 import { CoverDemo } from "@/components/Cover";
 import { HoverBorderGradientDemo } from "@/components/hover-border-gradient";
 import { Cover } from "@/components/ui/cover";
@@ -10,18 +9,11 @@ import { InfiniteMovingCardsDemo } from "@/components/MovingCards";
 import { AnimatedTestimonialsDemo } from "@/components/Testimonials";
 import { TimelineDemo } from "@/components/Timeline";
 
-export default function Home() {
+export default function Page() {
   return (
     
     <div>
-      <CoverDemo />
-      <div className="relative z-10" style={{ position: 'relative', top: '0px', left: '550px' }}>
-        <AnimatedTestimonialsDemo />
-      </div>
-      <TimelineDemo/>
+      
     </div>
   );
 }
-
-
-
