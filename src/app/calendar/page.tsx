@@ -71,7 +71,7 @@ export default function Home() {
       </div>
 
       <div style={{ 
-      maxWidth: '1460px', 
+      maxWidth: '1500px', 
       maxHeight: '750px',
       marginTop: '-100px', // Keep marginTop as is
       marginLeft: '40px', // Replacing shorthand to avoid conflict
