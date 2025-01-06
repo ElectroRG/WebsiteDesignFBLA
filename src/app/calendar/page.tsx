@@ -1,5 +1,5 @@
 'use client';
-import styles from './page.module.css'
+//import styles from './page.module.css'
 import {
   viewDay,
   viewMonthAgenda,
@@ -43,7 +43,7 @@ export default function Home() {
   }, [createDragAndDropPlugin(), createEventModalPlugin(), eventsServicePlugin])
 
   return (
-    <main className={styles.main}>
+    <main /*className={styles.main}*/>
       <ScheduleXCalendar calendarApp={calendarApp} />
     </main>
   )
