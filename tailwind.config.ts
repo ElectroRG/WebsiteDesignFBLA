@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss";
+  import type { Config } from "tailwindcss";
 
 export default {
   content: [
@@ -18,5 +18,3 @@ export default {
     
   ],
 } satisfies Config;
-
-
