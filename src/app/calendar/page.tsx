@@ -21,7 +21,6 @@ export default function Home() {
   const eventsServicePlugin = useState(() => createEventsServicePlugin())[0];
 
   const calendarApp = createCalendar({
-    theme: 'shadcn',
     views: [viewWeek, viewMonthGrid, viewDay, viewMonthAgenda],
     defaultView: viewWeek.name,
     callbacks: {
@@ -65,10 +64,8 @@ export default function Home() {
 
   return (
     <div>
-      <div
-        className={`w-screen h-screen absolute bg-black/50 z-50 backdrop-blur-md ${isVisible ? 'block' : 'hidden'}`} // Step 3: Toggle visibility based on state
-      >
-        {/* Your content inside this div */}
+
+      <div className={`w-screen h-screen absolute bg-black/50 z-50 backdrop-blur-md ${isVisible ? 'block' : 'hidden'}`} >
       </div>
 
       <div>
