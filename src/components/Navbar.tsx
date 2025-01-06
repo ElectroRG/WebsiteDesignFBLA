@@ -13,13 +13,19 @@ const Navbar = ({ className }: { className?: string })=>{
                 <Menu setActive={setActive} >
                     <MenuItem setActive={setActive} active={active} item="Information">
                     <div className="flex flex-col space-y-4 text-sm">
-                        <HoveredLink href="/web-dev">Directions</HoveredLink>
+                        <HoveredLink href="/information">Directions</HoveredLink>
                         <HoveredLink href="/interface-design">Seating Charts</HoveredLink>
                         <HoveredLink href="/seo">Policies</HoveredLink>
                         <HoveredLink href="/branding">Amenities</HoveredLink>
                     </div>
                     </MenuItem>
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
                     
                     <MenuItem setActive={setActive} active={active} item="Events">
                     <div className="flex flex-col space-y-4 text-sm">

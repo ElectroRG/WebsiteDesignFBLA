@@ -11,7 +11,7 @@ export function CoverDemo() {
   return (
     <div>
       <h1 className="text-4xl md:text-4xl lg:text-6xl font-semibold max-w-7xl mx-auto  mt-6 relative z-20 py-6  " style={{ transform: 'translate(0px, 200px)' }}>
-        Come<FlipWords words={words}/> <br/> at <Cover>Lafayette Stadium</Cover>
+        Come <FlipWords words={words}/> <br/> at <Cover>Lafayette Stadium</Cover>
       </h1>
     </div>
   );
