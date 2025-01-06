@@ -43,4 +43,5 @@ const config: Config = {
   plugins: [addVariablesForColors],
 } satisfies Config;
 
+
 export default config;
