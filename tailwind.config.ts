@@ -18,11 +18,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-<<<<<<< Updated upstream
   darkMode: "class",
-=======
-  darkMode: "class", // Keep the dark mode setting
->>>>>>> Stashed changes
   theme: {
     extend: {
       colors: {
@@ -44,12 +40,7 @@ const config: Config = {
       },
     },
   },
-<<<<<<< Updated upstream
   plugins: [addVariablesForColors],
 } satisfies Config;
-=======
-  plugins: [addVariablesForColors], // Add the plugin here
-};
->>>>>>> Stashed changes
 
 export default config;

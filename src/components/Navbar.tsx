@@ -19,13 +19,6 @@ const Navbar = ({ className }: { className?: string })=>{
                         <HoveredLink href="/branding">Amenities</HoveredLink>
                     </div>
                     </MenuItem>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
                     
                     <MenuItem setActive={setActive} active={active} item="Events">
                     <div className="flex flex-col space-y-4 text-sm">
