@@ -16,7 +16,7 @@ const transition = {
 export const MenuItem = ({
   setActive,
   active,
-  item, 
+  item,
   children,
 }: {
   setActive: (item: string) => void;
@@ -25,10 +25,10 @@ export const MenuItem = ({
   children?: React.ReactNode;
 }) => {
   return (
-    <div onMouseEnter={() => setActive(item)} className="relative ">
+    <div onMouseEnter={() => setActive(item)} className="relative">
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer text-black hover:opacity-[0.9] dark:text-black"
+        className="cursor-pointer text-xl text-black hover:opacity-[0.9] dark:text-black"
       >
         {item}
       </motion.p>
@@ -42,13 +42,10 @@ export const MenuItem = ({
             <div className="absolute top-[calc(100%_+_1.2rem)] left-1/2 transform -translate-x-1/2 pt-4">
               <motion.div
                 transition={transition}
-                layoutId="active" // layoutId ensures smooth animation
+                layoutId="active"
                 className="bg-white dark:bg-white backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
               >
-                <motion.div
-                  layout // layout ensures smooth animation
-                  className="w-max h-full p-4"
-                >
+                <motion.div layout className="w-max h-full p-4">
                   {children}
                 </motion.div>
               </motion.div>
@@ -63,16 +60,33 @@ export const MenuItem = ({
 export const Menu = ({
   setActive,
   children,
+  logo,
 }: {
   setActive: (item: string | null) => void;
   children: React.ReactNode;
+  logo?: { src: string; alt: string; href?: string }; // Add logo prop
 }) => {
   return (
     <nav
-      onMouseLeave={() => setActive(null)} // resets the state
-      className="relative rounded-none border border-transparent dark:bg-white dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-8 px-8 py-6 h-15 "
+      onMouseLeave={() => setActive(null)}
+      className="relative rounded-none border border-transparent dark:bg-white dark:border-white/[0.2] bg-white shadow-input flex items-center justify-start px-1 py-1 h-20" // Adjusted px-4 and py-4 for overall padding
     >
-      {children}
+      {logo && (
+        <a
+          href={logo.href || "/"}
+          className="flex items-center"
+          style={{ marginLeft: "10px" , marginRight:"675px",marginTop:"1px",marginBottom:"5px"}} // Reduced margin to 8px
+        >
+          <img
+            src={logo.src}
+            alt={logo.alt}
+            width={75} // Reduced size to make it more compact
+            height={75}
+            className="rounded-md" // Optional: add rounded corners
+          />
+        </a>
+      )}
+      <div className="flex space-x-8">{children}</div> {/* Reduced spacing between menu items */}
     </nav>
   );
 };
@@ -113,7 +127,7 @@ export const HoveredLink = ({ children, ...rest }: any) => {
   return (
     <Link
       {...rest}
-      className="text-black dark:text-black hover:text-black "
+      className="text-black dark:text-black hover:text-black"
     >
       {children}
     </Link>
