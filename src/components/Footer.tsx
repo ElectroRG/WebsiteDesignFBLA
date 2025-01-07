@@ -31,6 +31,10 @@ const location = [
     text: "Location",
     className: "text-white-500 dark:text-yellow-500 text-xl",
   },
+  {
+    text: "Details",
+    className: "text-yellow-500 dark:text-yellow-500 text-xl",
+  },
 ];
 
 const contact = [
@@ -44,19 +48,15 @@ const contact = [
   },
 ];
 
-const week = 'Monday - Friday: 4:00 PM - 9:00 PM';
-const saturday = 'Saturday: 8:00 AM - 9:00 PM';
-const sunday = 'Sunday: 10:00 AM - 6:00 PM';
+
 const locate = 'Lafayette High School, 17050 Clayton Rd, Wildwood, MO 63011';
-const number = '+1 (636) 733-4100'; 
-const email = 'sumnerjonathon@rsdmo.org';  
-const website = 'https://lafayette.rsdmo.org/'; 
 
 const Footer: React.FC = () => {
   return (
     <footer style={{ padding: "20px", backgroundColor: "#333", color: "#fff", textAlign: "center" }}>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <TypewriterEffectSmooth words={stadium} />
+      <TypewriterEffectSmooth words={stadium} />
+
           </div>
 
           <div
@@ -69,15 +69,20 @@ const Footer: React.FC = () => {
         >
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
             <TypewriterEffectSmooth words={business} />
-            <TextGenerateEffect words={week} />
-            <TextGenerateEffect words={saturday} />
-            <TextGenerateEffect words={sunday} />
+            <b>
+              <p>Monday - Friday: 4:00 PM - 9:00 PM</p>
+              <p>Saturday: 8:00 AM - 9:00 PM</p>
+              <p>Sunday: 10:00 AM - 6:00 PM</p>
+            </b>
           </div>
 
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
           <TypewriterEffectSmooth words={location} />
           <section>
-            <TextGenerateEffect words={locate} />
+            <b>
+              <p>Lafayette High School</p>
+              <p> 17050 Clayton Rd, Wildwood, MO 63011</p>
+            </b>
             <div
               style={{
                 marginTop: "16px", // Adds spacing between the address and the map
@@ -102,9 +107,11 @@ const Footer: React.FC = () => {
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
             <TypewriterEffectSmooth words={contact} />
             <div>
-              <TextGenerateEffect words={number} />
-              <TextGenerateEffect words={email} />
-              <TextGenerateEffect words={website} />
+              <b>
+                <p>+1 (636) 733-4100</p>
+                <p>sumnerjonathon@rsdmo.org</p>
+                <p>https://lafayette.rsdmo.org/</p>
+              </b>
             </div>
           </div>
     </div>
