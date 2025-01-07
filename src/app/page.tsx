@@ -8,6 +8,7 @@ import { TextHoverEffect2 } from "@/components/Text2";
 import { TimelineDemo } from "@/components/Timeline";
 import { TypewriterEffectSmooth } from '@/components/ui/typewriter-effect';
 import Footer from "@/components/Footer";
+import { SignupFormDemo } from "@/components/SignUp";
 
 
 const stadium = [
@@ -39,8 +40,10 @@ export default function Home() {
       </div>
 
 
+
       <Footer/>
       {/* Add Footer here */}
+      
     </div>
   );
 }
