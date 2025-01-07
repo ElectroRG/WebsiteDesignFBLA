@@ -80,7 +80,7 @@ export default function Home() {
     <div>
       {/* Modal */}
       {isVisible && eventDetails && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black/50 z-50 backdrop-blur-md flex items-center justify-center">
+        <div className="fixed top-0 left-0 w-full h-full bg-black/50 z-50 backdrop-blur-md flex items-center justify-center "> 
           <div className="bg-white p-6 rounded-lg max-w-lg w-full">
             <h2 className="text-2xl font-semibold mb-4">{eventDetails.title}</h2>
             <p><strong>Start Time:</strong> {eventDetails.start && new Date(eventDetails.start).toLocaleString()}</p>

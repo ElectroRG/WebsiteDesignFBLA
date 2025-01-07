@@ -1,7 +1,18 @@
-// SeatingChart.js
-
 import { useState } from 'react';
 import './SeatingChart.css';
+import { TypewriterEffectSmooth } from '@/components/ui/typewriter-effect';
+import { SignupFormDemo } from '@/components/SignUp';
+
+const stadium = [
+  {
+    text: "Stadium",
+    className: "text-white-500 dark:text-yellow-500",
+  },
+  {
+    text: "Booking",
+    className: "text-yellow-500 dark:text-yellow-500",
+  },
+];
 
 const sections = [
   { id: 'Section 1', seats: Array.from({ length: 200 }, (_, i) => ({ id: i + 1, reserved: false, selected: false })) },
@@ -15,6 +26,8 @@ const sections = [
 function SeatingChart() {
   const [selectedSection, setSelectedSection] = useState(null);
   const [seats, setSeats] = useState([]);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [reservedSeats, setReservedSeats] = useState([]);
 
   const handleSectionClick = (sectionId) => {
     const section = sections.find(s => s.id === sectionId);
@@ -32,16 +45,23 @@ function SeatingChart() {
   };
 
   const handleReserveClick = () => {
+    const reserved = seats.filter(seat => seat.selected).map(seat => seat.id);
+    setReservedSeats(reserved);
     setSeats(seats.map(seat => {
       if (seat.selected) {
         return { ...seat, reserved: true, selected: false };
       }
       return seat;
     }));
+    setIsPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setIsPopupOpen(false);
   };
 
   return (
-    <div>
+    <div className="seating-chart-container">
       <div className="sections">
         {sections.map(section => (
           <div
@@ -63,13 +83,20 @@ function SeatingChart() {
                 className={`seat ${seat.reserved ? 'reserved' : ''} ${seat.selected ? 'selected' : ''}`}
                 onClick={() => handleSeatClick(seat.id)}
               >
-                {seat.id} {/* Simplified seat label */}
+                {seat.id}
               </div>
             ))}
           </div>
           <button onClick={handleReserveClick} disabled={!seats.some(seat => seat.selected)}>
             Reserve Seats
           </button>
+        </div>
+      )}
+
+      {isPopupOpen && (
+        <div className="popup-overlay">
+            <SignupFormDemo />
+            <button className="close-popup" onClick={closePopup}>Close</button>
         </div>
       )}
     </div>
