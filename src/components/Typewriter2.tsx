@@ -13,7 +13,7 @@ export function TypewriterEffectSmoothDemo2() {
     },
   ];
   return (
-    <div className="flex flex-col items-left justify-center h-[17.5rem] mx-10">
+    <div className="flex flex-col items-left justify-center mx-10">
       <TypewriterEffectSmooth words={words} />
     </div>
   );
