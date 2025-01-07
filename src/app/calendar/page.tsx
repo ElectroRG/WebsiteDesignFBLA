@@ -14,9 +14,17 @@ import { createEventModalPlugin } from "@schedule-x/event-modal";
 import { ScheduleXCalendar, useCalendarApp } from "@schedule-x/react";
 import { createEventsServicePlugin } from "@schedule-x/events-service";
 import { TypewriterEffectSmoothDemo } from '@/components/Typewriter';
+import SeatingChart from './SeatingChart';
+
+interface EventDetails {
+  title?: string;
+  start?: string | Date;
+  end?: string | Date;
+}
 
 export default function Home() {
-  const [isVisible, setIsVisible] = useState(false); // Step 1: State to manage visibility
+  const [isVisible, setIsVisible] = useState(false); // Modal visibility
+  const [eventDetails, setEventDetails] = useState<EventDetails | null>(null); // Store event details
 
   const eventsServicePlugin = useState(() => createEventsServicePlugin())[0];
 
@@ -42,7 +50,8 @@ export default function Home() {
       },
       onEventClick(calendarEvent) {
         console.log('onEventClick', calendarEvent);
-        setIsVisible(true); // Step 2: Set visibility to true on event click
+        setEventDetails(calendarEvent); // Update event details
+        setIsVisible(true); // Show modal on event click
       },
     },
     events: [
@@ -62,11 +71,29 @@ export default function Home() {
     selectedDate: '2023-12-15',
   }, [createEventModalPlugin(), eventsServicePlugin]);
 
+  const closeModal = () => {
+    setIsVisible(false); // Close modal
+    setEventDetails(null); // Reset event details
+  };
+
   return (
     <div>
-
-      <div className={`w-screen h-screen absolute bg-black/50 z-50 backdrop-blur-md ${isVisible ? 'block' : 'hidden'}`} >
-      </div>
+      {/* Modal */}
+      {isVisible && eventDetails && (
+        <div className="fixed top-0 left-0 w-full h-full bg-black/50 z-50 backdrop-blur-md flex items-center justify-center">
+          <div className="bg-white p-6 rounded-lg max-w-lg w-full">
+            <h2 className="text-2xl font-semibold mb-4">{eventDetails.title}</h2>
+            <p><strong>Start Time:</strong> {eventDetails.start && new Date(eventDetails.start).toLocaleString()}</p>
+            <p><strong>End Time:</strong> {eventDetails.end && new Date(eventDetails.end).toLocaleString()}</p>
+            <div className="mt-4">
+              <h3 className="font-medium text-lg">Seating Chart</h3>
+              {/* Example of a simple seating chart, can be replaced with a more detailed one */}
+              <SeatingChart />
+            </div>
+            <button onClick={closeModal} className="mt-4 px-4 py-2 bg-red-500 text-white rounded">Close</button>
+          </div>
+        </div>
+      )}
 
       <div>
         <TypewriterEffectSmoothDemo />
@@ -76,10 +103,10 @@ export default function Home() {
         style={{
           maxWidth: '1500px',
           maxHeight: '750px',
-          marginTop: '-100px', // Keep marginTop as is
-          marginLeft: '40px', // Replacing shorthand to avoid conflict
-          marginRight: 'auto', // Replacing shorthand to avoid conflict
-          marginBottom: '0', // Replacing shorthand to avoid conflict
+          marginTop: '-100px', 
+          marginLeft: '40px', 
+          marginRight: 'auto', 
+          marginBottom: '0', 
           height: '800px',
           overflow: 'auto',
           display: 'flex',

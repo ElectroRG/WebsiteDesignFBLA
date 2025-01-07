@@ -1,0 +1,98 @@
+/* SeatingChart.css */
+.sections {
+    display: flex;
+    gap: 10px;
+    margin: 20px auto; /* Reduced top and bottom margins */
+    justify-content: center;
+    flex-wrap: wrap; /* Allow sections to wrap */
+  }
+  
+  .section {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+  }
+  
+  .section:hover {
+    background-color: #45a049;
+  }
+  
+  .section.selected {
+    background-color: #ffcc00;
+  }
+  
+  .seating-chart {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 8px;
+    margin: 10px auto;
+    max-height: 300px; /* Adjust to show fewer seats vertically */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-right: 20px; /* Add padding to avoid scrollbar overlap */
+  }
+  
+  .seat {
+    width: 35px;
+    height: 35px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  
+  .seat.selected {
+    background-color: #ffcc00;
+  }
+  
+  .seat.reserved {
+    background-color: #ff3333;
+    cursor: not-allowed;
+  }
+  
+  .seat:hover {
+    background-color: #ddd;
+  }
+  
+  button {
+    background-color: #FF5733;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #FF2D00;
+    transform: scale(1.05);
+  }
+  
+  button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  
+  @media (max-width: 600px) {
+    .seating-chart {
+      grid-template-columns: repeat(5, 1fr); /* Adjust for smaller screens */
+    }
+  
+    .seat {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  
