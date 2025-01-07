@@ -75,7 +75,7 @@ export const Menu = ({
         <a
           href={logo.href || "/"}
           className="flex items-center"
-          style={{ marginLeft: "10px" , marginRight:"675px",marginTop:"1px",marginBottom:"5px"}} // Reduced margin to 8px
+          style={{ marginLeft: "10px" , marginRight:"750px",marginTop:"1px",marginBottom:"5px"}} // Reduced margin to 8px
         >
           <img
             src={logo.src}

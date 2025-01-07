@@ -21,7 +21,7 @@ const Navbar = ({ className }: { className?: string }) => {
             <div className="flex flex-col space-y-4 text-sm">
               <HoveredLink href="/information">Directions</HoveredLink>
               <HoveredLink href="/interface-design">Seating Charts</HoveredLink>
-              <HoveredLink href="/seo">Policies</HoveredLink>
+              <HoveredLink href="/policies">Policies</HoveredLink>
               <HoveredLink href="/branding">Amenities</HoveredLink>
             </div>
           </MenuItem>
