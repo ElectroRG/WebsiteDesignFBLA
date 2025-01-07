@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaGlobe } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaGlobe } from 'react-icons/fa';
 
 export default function InfoPage() {
   const [showContactForm, setShowContactForm] = useState(false);

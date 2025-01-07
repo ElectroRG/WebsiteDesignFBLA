@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaGlobe } from 'react-icons/fa';
+// import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaGlobe } from 'react-icons/fa';
 import { TypewriterEffectSmoothDemo2} from '@/components/Typewriter2';
 import { TypewriterEffectSmooth } from '@/components/ui/typewriter-effect';
 

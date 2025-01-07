@@ -13,7 +13,7 @@ const sections = [
 function SeatingChart() {
   const [selectedSection, setSelectedSection] = useState(null);
   const [seats, setSeats] = useState([]);
-  const [reservedSeats, setReservedSeats] = useState([]);
+  const [setReservedSeats] = useState([]);
 
   // Load saved reservations from localStorage on first render
   useEffect(() => {

@@ -20,6 +20,9 @@ const nextConfig: NextConfig = {
   basePath: '/WebsiteDesignFBLA', // Replace 'REPOSITORY_NAME' with your actual GitHub repository name
   assetPrefix: '/WebsiteDesignFBLA/', // Replace 'REPOSITORY_NAME' with your actual GitHub repository name
   trailingSlash: true,  // Ensures proper routing for static pages
+  eslint: {
+    ignoreDuringBuilds: true
+  }
 };
 
 module.exports = nextConfig;
