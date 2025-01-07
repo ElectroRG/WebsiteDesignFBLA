@@ -22,7 +22,17 @@ const nextConfig: NextConfig = {
   trailingSlash: true,  // Ensures proper routing for static pages
   eslint: {
     ignoreDuringBuilds: true
-  }
+  },
+  content: [
+    './src/app/**/*.{js,ts,jsx,tsx}', // scan all files in the `src/app` directory
+    './src/components/**/*.{js,ts,jsx,tsx}', // scan all files in the `src/components` directory
+    './src/components/ui/**/*.{js,ts,jsx,tsx}', // scan all files in `src/components/ui` directory
+    './public/**/*.{html,js}', // scan any public HTML files (if used)
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
 };
 
 module.exports = nextConfig;
