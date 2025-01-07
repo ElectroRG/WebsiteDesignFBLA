@@ -15,6 +15,13 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  output: "export",  // Enables static exports
+  reactStrictMode: true,
+  basePath: '/WebsiteDesignFBLA', // Replace 'REPOSITORY_NAME' with your actual GitHub repository name
+  assetPrefix: '/WebsiteDesignFBLA/', // Replace 'REPOSITORY_NAME' with your actual GitHub repository name
+  trailingSlash: true,  // Ensures proper routing for static pages
 };
+
+module.exports = nextConfig;
 
 export default nextConfig;
