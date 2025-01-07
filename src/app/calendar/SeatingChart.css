@@ -9,8 +9,7 @@
   
   .section {
     padding: 8px 16px;
-    background-color: #f8e920;
-    color: black;
+    background-color:  #5A5A5A;
     cursor: pointer;
     border-radius: 5px;
     font-weight: bold;
@@ -20,11 +19,12 @@
   }
   
   .section:hover {
-    background-color: #f8e920;
+    background-color: gray;
   }
   
   .section.selected {
-    background-color: #ffcc00;
+    background-color: #FFEB3B;
+    color: black;
   }
   
   .seating-chart {
@@ -41,7 +41,7 @@
   .seat {
     width: 35px;
     height: 35px;
-    background-color: #eee;
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,21 +52,25 @@
   }
   
   .seat.selected {
-    background-color: #ffcc00;
+    background-color: #FFEB3B;
+    color: black;
   }
   
   .seat.reserved {
-    background-color: #ff3333;
+    background-color: gray;
+    color: black;
     cursor: not-allowed;
+    
   }
   
   .seat:hover {
-    background-color: #ddd;
+    background-color: grey;
   }
   
-  button {
-    background-color: #FF5733;
-    color: white;
+  .seating-chart-container button,
+  .popup-overlay button {
+    background-color: #FFEB3B;
+    color: black;
     font-size: 16px;
     font-weight: bold;
     padding: 10px 20px;
@@ -77,13 +81,17 @@
     margin-top: 10px;
   }
   
-  button:hover {
-    background-color: #FF2D00;
+  .seating-chart-container button:hover,
+  .popup-overlay button:hover {
+    background-color: #FFEB3B;
+    color: black;
     transform: scale(1.05);
   }
   
-  button:disabled {
-    background-color: #ddd;
+  .seating-chart-container button:disabled,
+  .popup-overlay button:disabled {
+    background-color: #5A5A5A;
+    color: white;
     cursor: not-allowed;
   }
   
@@ -112,11 +120,12 @@
 }
 
 .popup-container {
-  background: white;
+  background: black;
   padding: 20px;
   border-radius: 10px;
   width: 400px;
   text-align: center;
+  color: white;
 }
 
 .popup-content h2 {

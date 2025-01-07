@@ -80,14 +80,13 @@ export default function Home() {
     <div>
       {/* Modal */}
       {isVisible && eventDetails && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black/50 z-50 backdrop-blur-md flex items-center justify-center "> 
-          <div className="bg-white p-6 rounded-lg max-w-lg w-full">
+        <div className="fixed top-0 left-0 w-full h-full bg-black/50 z-50 backdrop-blur-md flex items-center justify-center">
+          <div className="bg-black p-6 rounded-lg max-w-lg w-full">
             <h2 className="text-2xl font-semibold mb-4">{eventDetails.title}</h2>
             <p><strong>Start Time:</strong> {eventDetails.start && new Date(eventDetails.start).toLocaleString()}</p>
             <p><strong>End Time:</strong> {eventDetails.end && new Date(eventDetails.end).toLocaleString()}</p>
             <div className="mt-4">
               <h3 className="font-medium text-lg">Seating Chart</h3>
-              {/* Example of a simple seating chart, can be replaced with a more detailed one */}
               <SeatingChart />
             </div>
             <button onClick={closeModal} className="mt-4 px-4 py-2 bg-red-500 text-white rounded">Close</button>
