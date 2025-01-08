@@ -1,7 +1,7 @@
 import React from "react";
 import { Cover } from "@/components/ui/cover";
 import { FlipWords } from "./ui/flip-words";
-import { FlipWordsDemo } from "./Flip";
+// import { FlipWordsDemo } from "./Flip";
 
 export function CoverDemo() {
 

@@ -6,7 +6,7 @@ import { TypewriterEffectSmooth } from '@/components/ui/typewriter-effect';
 
 export default function InfoPage() {
     const [showContactForm, setShowContactForm] = useState(false);
-    const toggleContactForm = () => setShowContactForm(!showContactForm);
+    // const toggleContactForm = () => setShowContactForm(!showContactForm);
 
     const location =[
         {
@@ -15,27 +15,27 @@ export default function InfoPage() {
         },
     ]
 
-    const business =[
-        {
-            text: "Business",
-            className: "text-white-500 dark:text-yellow-500",
-        },
-        {
-            text:"Hours",
-            className: "text-white-500 dark:text-yellow-500",
-        }
-    ]
+    // // const business =[
+    //     {
+    //         text: "Business",
+    //         className: "text-white-500 dark:text-yellow-500",
+    //     },
+    //     {
+    //         text:"Hours",
+    //         className: "text-white-500 dark:text-yellow-500",
+    //     }
+    // ]
 
-    const contact =[
-        {
-            text: "Contact",
-            className: "text-white-500 dark:text-yellow-500",
-        },
-        {
-            text:"Us",
-            className: "text-white-500 dark:text-yellow-500",
-        }
-    ]
+    // const contact =[
+    //     {
+    //         text: "Contact",
+    //         className: "text-white-500 dark:text-yellow-500",
+    //     },
+    //     {
+    //         text:"Us",
+    //         className: "text-white-500 dark:text-yellow-500",
+    //     }
+    // ]
 
     return(
         <div>

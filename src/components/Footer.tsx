@@ -2,7 +2,7 @@
 
 import React from "react";
 import { TypewriterEffectSmooth } from '@/components/ui/typewriter-effect';
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+// import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 const stadium = [
   {
@@ -49,7 +49,7 @@ const contact = [
 ];
 
 
-const locate = 'Lafayette High School, 17050 Clayton Rd, Wildwood, MO 63011';
+// const locate = 'Lafayette High School, 17050 Clayton Rd, Wildwood, MO 63011';
 
 const Footer: React.FC = () => {
   return (
